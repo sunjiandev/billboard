@@ -1,0 +1,22 @@
+server:
+  port: 1118
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sunjiandev?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: sunshine123
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  type-aliases-package: com.sunjiandev.billboard.entity
+  mapper-locations: classpath:mapping/*Mapper.xml
+
+logging:
+  level:
+    com:
+      sunjiandev:
+        billboard:
+          mapper:
+            debug
+
+
